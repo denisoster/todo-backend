@@ -1,0 +1,31 @@
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'Rakefile'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'spec/rails_helper.rb'
+    - 'vendor/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/AbcSize:
+  Max: 15
+
+Metrics/MethodLength:
+  Max: 10
