@@ -22,4 +22,4 @@ pipeline:
       - chmod 700 ~/.ssh
       - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
       - bundle exec mina deploy
-     secrets: [ mina_private_key ]
+    secrets: [ mina_private_key ]
