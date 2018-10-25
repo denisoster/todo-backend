@@ -1,0 +1,17 @@
+services:
+  database:
+    image: postgres:9.5
+
+pipeline:
+  build:
+    image: ruby:2.5.3-alpine
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_HOST=database
+    commands:
+      - apk add --update build-base libxml2-dev libxslt-dev libgcrypt-dev libsodium-dev postgresql-dev tzdata imagemagick && rm -rf /var/cache/apk/*
+      - bundle config build.nokogiri --use-system-libraries
+      - bundle install --path vendor
+      - bundle exec rubocop
+      - RAILS_ENV=test bundle exec rake db:create db:schema:load
+      - RAILS_ENV=test bundle exec rspec
