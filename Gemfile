@@ -32,6 +32,8 @@ gem 'apipie-rails', '~> 0.5.13'
 gem 'mina', '~> 1.2', '>= 1.2.3', require: false
 # Puma tasks for Mina
 gem 'mina-puma', '~> 1.1', require: false
+# Library for setting test data
+gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -39,8 +41,6 @@ group :development, :test do
 
   # RSpec for Rails-3+
   gem 'rspec-rails', '~> 3.8'
-  # Library for setting test data
-  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
   # A library for generating fake data such as names, addresses, and phone numbers.
   gem 'faker', '~> 1.9', '>= 1.9.1'
   # Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
