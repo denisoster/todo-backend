@@ -3,3 +3,9 @@
 Site: [http://todo.osterdev.com/api/v1/projects](http://todo.osterdev.com/api/v1/projects)
 
 API Documentation: [http://todo.osterdev.com/apipie](http://todo.osterdev.com/apipie)
+
+DEMO:
+
+email: ignacio@gmail.com
+
+pass: asdfasdf
